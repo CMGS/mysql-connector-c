@@ -21,7 +21,7 @@
 */
 
 #ifdef WITH_GREENIFY
-#include <greenify.h>
+#include <libgreenify.h>
 #define read(...) green_read(__VA_ARGS__)
 #define write(...) green_write(__VA_ARGS__)
 #endif
