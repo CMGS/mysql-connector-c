@@ -19,3 +19,6 @@ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
 
 ADD_EXECUTABLE(mysql_client_test mysql_client_test.c ../mysys/my_memmem.c)
 TARGET_LINK_LIBRARIES(mysql_client_test mysqlclient)
+IF(WITH_GREENIFY)
+  TARGET_LINK_LIBRARIES(mysql_client_test greenify)
+ENDIF(WITH_GREENIFY)
