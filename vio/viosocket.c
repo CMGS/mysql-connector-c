@@ -20,6 +20,12 @@
   the file descriptior.
 */
 
+#ifdef WITH_GREENIFY
+#include <greenify.h>
+#define read(...) green_read(__VA_ARGS__)
+#define write(...) green_write(__VA_ARGS__)
+#endif
+
 #include "vio_priv.h"
 
 int vio_errno(Vio *vio __attribute__((unused)))
