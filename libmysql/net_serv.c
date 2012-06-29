@@ -37,6 +37,14 @@
   HFTODO this must be hidden if we don't want client capabilities in 
   embedded library
  */
+
+#ifdef WITH_GREENIFY
+#include <libgreenify.h>
+#define read(...) green_read(__VA_ARGS__)
+#define write(...) green_write(__VA_ARGS__)
+#define poll(...) green_poll(__VA_ARGS__)
+#endif
+
 #include <my_global.h>
 #include <mysql.h>
 #include <mysql_com.h>
