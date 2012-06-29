@@ -34,6 +34,12 @@
   server.
 */ 
 
+#ifdef WITH_GREENIFY
+#include <libgreenify.h>
+#define connect(...) green_connect(__VA_ARGS__)
+#define poll(...) green_poll(__VA_ARGS__)
+#endif
+
 #include <my_global.h>
 
 #include "mysql.h"
