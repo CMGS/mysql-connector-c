@@ -24,6 +24,7 @@
 #include <libgreenify.h>
 #define read(...) green_read(__VA_ARGS__)
 #define write(...) green_write(__VA_ARGS__)
+#define poll(...) green_poll(__VA_ARGS__)
 #endif
 
 #include "vio_priv.h"
