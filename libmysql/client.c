@@ -36,8 +36,8 @@
 
 #ifdef WITH_GREENIFY
 #include <libgreenify.h>
-#define connect(...) green_connect(__VA_ARGS__)
-#define poll(...) green_poll(__VA_ARGS__)
+#define connect green_connect
+#define poll green_poll
 #endif
 
 #include <my_global.h>
