@@ -40,9 +40,9 @@
 
 #ifdef WITH_GREENIFY
 #include <libgreenify.h>
-#define read(...) green_read(__VA_ARGS__)
-#define write(...) green_write(__VA_ARGS__)
-#define poll(...) green_poll(__VA_ARGS__)
+#define read green_read
+#define write green_write
+#define poll green_poll
 #endif
 
 #include <my_global.h>

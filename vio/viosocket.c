@@ -22,11 +22,11 @@
 
 #ifdef WITH_GREENIFY
 #include <libgreenify.h>
-#define read(...) green_read(__VA_ARGS__)
-#define write(...) green_write(__VA_ARGS__)
-#define recv(...) green_recv(__VA_ARGS__)
-#define send(...) green_send(__VA_ARGS__)
-#define poll(...) green_poll(__VA_ARGS__)
+#define read green_read
+#define write green_write
+#define recv green_recv
+#define send green_send
+#define poll green_poll
 #endif
 
 #include "vio_priv.h"
